@@ -1,0 +1,154 @@
+<dataSource name="MySQL - test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="test">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="bbs" />
+    <schema id="3" name="bz1" />
+    <schema id="4" name="cart" />
+    <schema id="5" name="cw" />
+    <schema id="6" name="enter" />
+    <schema id="7" name="hb" />
+    <schema id="8" name="information_schema" />
+    <schema id="9" name="mysql" />
+    <schema id="10" name="petstore" />
+    <schema id="11" name="recart" />
+    <schema id="12" name="tt" />
+    <schema id="13" name="weibo" />
+    <table id="14" parent="1" name="bbsuser" />
+    <table id="15" parent="1" name="con_test" />
+    <table id="16" parent="1" name="dep" />
+    <table id="17" parent="1" name="employee" />
+    <table id="18" parent="1" name="father" />
+    <table id="19" parent="1" name="products" />
+    <table id="20" parent="1" name="son" />
+    <table id="21" parent="1" name="user" />
+    <routine id="22" parent="1" name="query_userbyid">
+      <routine-kind>NONE</routine-kind>
+    </routine>
+    <routine id="23" parent="1" name="query_userbyresult">
+      <routine-kind>NONE</routine-kind>
+    </routine>
+    <column id="24" parent="14" name="id">
+      <data-type>INT(10)|4</data-type>
+    </column>
+    <column id="25" parent="14" name="username">
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="26" parent="14" name="pwd">
+      <data-type>VARCHAR(50)|12</data-type>
+    </column>
+    <column id="27" parent="15" name="a">
+      <data-type>CHAR(1)|1</data-type>
+    </column>
+    <column id="28" parent="16" name="deptno">
+      <mandatory>1</mandatory>
+      <data-type>INT(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="29" parent="16" name="deptname">
+      <data-type>VARCHAR(11)|12</data-type>
+    </column>
+    <key id="30" parent="16" name="PRIMARY">
+      <name-surrogate>1</name-surrogate>
+      <columns>deptno</columns>
+      <primary>1</primary>
+    </key>
+    <column id="31" parent="17" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>INT(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="32" parent="17" name="name">
+      <data-type>VARCHAR(255)|12</data-type>
+    </column>
+    <column id="33" parent="17" name="deptno">
+      <data-type>INT(10)|4</data-type>
+    </column>
+    <column id="34" parent="17" name="sex">
+      <data-type>ENUM(7)|1</data-type>
+      <default-expression>'male'</default-expression>
+    </column>
+    <key id="35" parent="17" name="PRIMARY">
+      <name-surrogate>1</name-surrogate>
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="36" parent="18" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INT(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="37" parent="18" name="name">
+      <data-type>VARCHAR(20)|12</data-type>
+    </column>
+    <key id="38" parent="18" name="PRIMARY">
+      <name-surrogate>1</name-surrogate>
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="39" parent="19" name="proid">
+      <mandatory>1</mandatory>
+      <data-type>CHAR(3)|1</data-type>
+    </column>
+    <column id="40" parent="19" name="pname">
+      <mandatory>1</mandatory>
+      <data-type>VARCHAR(30)|12</data-type>
+    </column>
+    <column id="41" parent="19" name="price">
+      <data-type>DECIMAL(8,2)|3</data-type>
+    </column>
+    <column id="42" parent="19" name="stock">
+      <data-type>INT(10)|4</data-type>
+    </column>
+    <key id="43" parent="19" name="PRIMARY">
+      <name-surrogate>1</name-surrogate>
+      <columns>proid</columns>
+      <primary>1</primary>
+    </key>
+    <column id="44" parent="20" name="sid">
+      <mandatory>1</mandatory>
+      <data-type>INT(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="45" parent="20" name="sname">
+      <data-type>VARCHAR(20)|12</data-type>
+    </column>
+    <column id="46" parent="20" name="fid">
+      <data-type>INT(10)|4</data-type>
+    </column>
+    <key id="47" parent="20" name="PRIMARY">
+      <name-surrogate>1</name-surrogate>
+      <columns>sid</columns>
+      <primary>1</primary>
+    </key>
+    <column id="48" parent="21" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INT(10)|4</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="49" parent="21" name="username">
+      <data-type>VARCHAR(20)|12</data-type>
+    </column>
+    <column id="50" parent="21" name="password">
+      <data-type>VARCHAR(20)|12</data-type>
+    </column>
+    <key id="51" parent="21" name="PRIMARY">
+      <name-surrogate>1</name-surrogate>
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <argument id="52" parent="22" name="in_id">
+      <direction>IN</direction>
+      <data-type>INT(10)|4</data-type>
+    </argument>
+    <argument id="53" parent="23" name="in_id">
+      <direction>IN</direction>
+      <data-type>INT(10)|4</data-type>
+    </argument>
+    <argument id="54" parent="23" name="out_result">
+      <direction>IN</direction>
+      <data-type>VARCHAR(50)|12</data-type>
+    </argument>
+  </database-model>
+</dataSource>
